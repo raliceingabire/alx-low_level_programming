@@ -1,16 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "function-pointers.h"
+
 void print_name(char *name, void (*f)(char *)) {
-f(name);
-
-}
-void print_name_function(char *name) {
-printf("Name: %s\n", name);
-
-}
-int main() { 
-char name[] = "john doe";
-print_name(name, print_name_function);
-return0 ;
-
-
-}
+	if (name != NULL && f != NULL)
+		f(name);
+} 
