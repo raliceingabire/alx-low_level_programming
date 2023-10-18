@@ -2,7 +2,7 @@
 
 /**
  * main - entry point
- * Description - this is a program that prints the name of the file 
+ * Description - this is a program that prints the name of the file
  * Return: 0
  */
 
