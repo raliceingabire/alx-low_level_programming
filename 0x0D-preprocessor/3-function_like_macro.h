@@ -1,9 +1,4 @@
-#include <stdio.h>
-
-#define ABS(x) ( (x) < 0 ? -(x) : (x))
-int main(void) {
-int num = -5;
-int absNum = ABS(num);
- printf("the absolute value of %d is %d\n", num, absNum);
- return 0;`
-}
+#ifndef HEADER_H
+#define HEADER_H
+#define ABS(x) ((x) >= 0 ? (x) : -(x))
+#endif
