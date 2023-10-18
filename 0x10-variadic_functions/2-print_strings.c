@@ -4,12 +4,14 @@
 /**
  * print_strings - prints strings separated by separator
  * @separator: the string to be printed between the strings
- * the numbers of string to be printed
- * variable number of arguments (strings)
+ * @n: the numbers of string to be printed
+ * @...: variable number of arguments (strings)
+ *
  * Description: this function prints n strings separated by 'separator'
- * and if the separator is NULL then it won't not be printed
- * and if one string is NULL the finction will print (nil) instead
- 
+ *	and if the separator is NULL then it won't not be printed
+ *	and if one string is NULL the finction will print (nil) instead
+ * Example:
+ *	print_strings(", ", 2, "Jay", "Django"); --> Jay, Django
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
