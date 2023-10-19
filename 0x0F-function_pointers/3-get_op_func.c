@@ -1,30 +1,78 @@
 #include "3-calc.h"
 
-/*get_op_func - this function selects the correct op_func to preform
- * the operation
- * @s: the operator
- * Return: the result of the op_function
+/**
+ * op_add - adds two integers
+ * @a: the first number
+ * @b: the second number
+ *
+ * Return: return the result
  */
 
-int (*get_op_func(char *s))(int, int)
+int op_add(int a, int b)
 {
-	op_t ops[] = {
-	{"+", op_add},
-	{"-", op_sub},
-	{"*", op_mul},
-	{"/", op_div},
-	{"%", op_mod},
-	{NULL, NULL}
-	};
-	int i;
+	return (a + b);
+}
 
-	i = 0;
-	while (*(s + 1) == '\0' && i < 5)
+/**
+ * op_sub - subtaracts two integers
+ * @a: the first number
+ * @b: the second number
+ *
+ * Return: return the result
+ */
+
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+
+/**
+ * op_mul - multiplies two integers
+ * @a: the first number
+ * @b: the second number
+ *
+ * Return: return the result
+ */
+
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+
+/**
+ * op_div - devides two integers
+ * @a: the first number
+ * @b: the second number
+ *
+ * Return: return the result or
+ *	exit with the status 100 if b is 0
+ */
+
+int op_div(int a, int b)
+{
+	if (b == 0)
 	{
-	if (*s == *ops[i].op)
-		return (*ops[i].f);
-	i++;
+		printf("Error\n");
+		exit(100);
 	}
-	printf("Error\n");
-	exit(99);
+	return (a / b);
+}
+
+/**
+ * op_mod - devides two integers
+ * @a: the first number
+ * @b: the second number
+ *
+ * Return: return the reminder of the devision or
+ *	exit with the status 100 if b is 0
+ */
+
+int op_mod(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a % b);
 }

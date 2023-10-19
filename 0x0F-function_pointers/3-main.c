@@ -1,39 +1,28 @@
-#include "function_pointers.h"
-#include <stdlib.h>
-#include <stdio.h>
 #include "3-calc.h"
 
-/*
- * @argc: argument count
- * @argv: string of arguments in array
+/**
+ * main - entry point
+ * @argc: the number of arguments
+ * @argv: array of arguments
+ * Return: return 0 if the function runs successfuly
+ *	exit with 98 status if the arguments are more then 4
  */
 
-int main(int __attribute__((__unused__))argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int num1, num2;
-	chr *op;
+	int a, b, result;
+	char *op;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	num1 = atoi(argv[1]);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
 	op = argv[2];
-	num2 = atoi(argv[3]);
-	if (get_op_func(op) == NULL || op[1] != '\0'
-			{
-			printf("error\n");
-			exit(99);
-			}
-         if (('op == '/' && num2 == 0) || ('op == '%' && num2 == 0))
-	 {
-	 printf( "Error\n");
-	 exit(100);
-	 }
-	 printf("%d\n", get_op_func(op)(num1, num2));
-	 return (0);
-}
 
-	
-	 
+	result = (*get_op_func(op))(a, b);
+	printf("%d\n", result);
+	return (0);
+}	 
