@@ -4,6 +4,7 @@
 /**
  * print_elem - prints an integer
  * @elem: the integer to print
+ *
  * Return: Nothing.
  */
 void print_elem(int elem)
@@ -12,9 +13,11 @@ void print_elem(int elem)
 }
 
 /**
- * print_elem_hex - prints an integer, in hexad
+ * print_elem_hex - prints an integer, in hexadecimal
+ * @elem: the integer to print
+ *
+ * Return: Nothing.
  */
-
 void print_elem_hex(int elem)
 {
     printf("0x%x\n", elem);
@@ -33,3 +36,4 @@ int main(void)
     array_iterator(array, 5, &print_elem_hex);
     return (0);
 }
+
